@@ -43,22 +43,6 @@ exports.purchasePost = function(req, res, next){
         movie = 'Venom'
         res.render('ticketPurchase', {Showtime: showtime, Movie: movie})
     }
-    //Start of Restaurant selection
-    else if(req.body.refectory == 'Reserve Table'){
-        tableReservationTime == req.body.refectoryReservation;
-        restaurant = 'The Refectory';
-        res.render('tableReservation', {table_reservation_time: tableReservationTime, Restaurant: restaurant});
-    }
-    else if(req.body.akaiHana == 'Reserve Table'){
-        tableReservationTime == req.body.akaiHanaReservation;
-        restaurant = 'Akai Hana';
-        res.render('tableReservation', {table_reservation_time: tableReservationTime, Restaurant: restaurant});
-    }
-    else if(req.body.guildHouse == 'guildHouse'){
-        tableReservationTime == req.body.guildHouseReservation;
-        restaurant = 'The Guild House';
-        res.render('tableReservation', {table_reservation_time: tableReservationTime, Restaurant: restaurant});
-    }
     else {
         res.render('index')
     }
@@ -80,9 +64,9 @@ exports.reserveTablePost = function(req, res, next){
         restaurant = 'Akai Hana';
         res.render('tableReservation', {table_reservation_time: tableReservationTime, Restaurant: restaurant});
     }
-    else if(req.body.guildHouse == 'guildHouse'){
+    else if(req.body.guildHouse == 'Reserve Table'){
         tableReservationTime == req.body.guildHouseReservation;
-        restaurant = 'The Guild House';
+        restaurant = 'Guild House';
         res.render('tableReservation', {table_reservation_time: tableReservationTime, Restaurant: restaurant});
     }
 }
