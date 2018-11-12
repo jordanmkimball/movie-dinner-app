@@ -18,7 +18,7 @@ router.get('/about', main_controller.getAbout);
 router.post('/', main_controller.purchasePost);
 
 //POST Request for reserving a table
-router.get('/reserve_table', main_controller.reserveTablePost)
+router.post('/reserve_table', main_controller.reserveTablePost)
 
 
 module.exports = router;

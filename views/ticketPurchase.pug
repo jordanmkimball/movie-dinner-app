@@ -29,7 +29,7 @@ block content
       p Located 10 minutes from the movie theater
       p Open Tables:
 
-      form(action='', method='POST')
+      form(action='/reserve_table', method='POST')
         unless Showtime <= 5 || Showtime - 5 > 2
 
           input(type='radio', name='refectoryReservation', value= '5')
@@ -64,7 +64,7 @@ block content
       p Located 15 minutes from the movie theater
       p Open Tables:
 
-      form(method='POST', action='')
+      form(method='POST', action='/reserve_table')
         unless Showtime <= 5 || Showtime - 5 > 2
 
           input(type='radio', name='akaiHanaReservation', value= '5')
@@ -100,7 +100,7 @@ block content
       p Located 30 minutes from the movie theater
       p Open Tables:
 
-      form(method='POST', action='')
+      form(method='POST', action='/reserve_table')
 
         unless Showtime <= 5 || Showtime - 5 > 2
 
