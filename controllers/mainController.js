@@ -25,6 +25,9 @@ exports.getAbout = function(req, res, next){
 exports.purchasePost = function(req, res, next){
     var showtime;
     var movie;
+    var tableReservationTime;
+    var restaurant;
+    //Case where the submit button clicked was associated with Halloween
     if(req.body.halloween == 'Purchase Ticket'){
         showtime = req.body.halloweenShowtime;
         movie = 'Halloween (2018)'
@@ -40,7 +43,46 @@ exports.purchasePost = function(req, res, next){
         movie = 'Venom'
         res.render('ticketPurchase', {Showtime: showtime, Movie: movie})
     }
+    //Start of Restaurant selection
+    else if(req.body.refectory == 'Reserve Table'){
+        tableReservationTime == req.body.refectoryReservation;
+        restaurant = 'The Refectory';
+        res.render('tableReservation', {table_reservation_time: tableReservationTime, Restaurant: restaurant});
+    }
+    else if(req.body.akaiHana == 'Reserve Table'){
+        tableReservationTime == req.body.akaiHanaReservation;
+        restaurant = 'Akai Hana';
+        res.render('tableReservation', {table_reservation_time: tableReservationTime, Restaurant: restaurant});
+    }
+    else if(req.body.guildHouse == 'guildHouse'){
+        tableReservationTime == req.body.guildHouseReservation;
+        restaurant = 'The Guild House';
+        res.render('tableReservation', {table_reservation_time: tableReservationTime, Restaurant: restaurant});
+    }
     else {
         res.render('index')
     }
 };
+
+//display confirmed table reservation on POST
+
+exports.reserveTablePost = function(req, res, next){
+    var tableReservationTime;
+    var restaurant;
+    //Case where the submit button clicked was associated with the restaurant "The Refectory"
+    if(req.body.refectory == 'Reserve Table'){
+        tableReservationTime == req.body.refectoryReservation;
+        restaurant = 'The Refectory';
+        res.render('tableReservation', {table_reservation_time: tableReservationTime, Restaurant: restaurant});
+    }
+    else if(req.body.akaiHana == 'Reserve Table'){
+        tableReservationTime == req.body.akaiHanaReservation;
+        restaurant = 'Akai Hana';
+        res.render('tableReservation', {table_reservation_time: tableReservationTime, Restaurant: restaurant});
+    }
+    else if(req.body.guildHouse == 'guildHouse'){
+        tableReservationTime == req.body.guildHouseReservation;
+        restaurant = 'The Guild House';
+        res.render('tableReservation', {table_reservation_time: tableReservationTime, Restaurant: restaurant});
+    }
+}

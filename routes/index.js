@@ -17,5 +17,8 @@ router.get('/about', main_controller.getAbout);
 //POST Request for Halloween Movie Ticket Purchases
 router.post('/', main_controller.purchasePost);
 
+//POST Request for reserving a table
+router.get('/reserve_table', main_controller.reserveTablePost)
+
 
 module.exports = router;

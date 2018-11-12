@@ -6,7 +6,7 @@ block content
     br
     br
 
-    p.centered Thank you for purchasing a ticket for #{Movie} at #{Showtime}:00 pm. Click <a href='/ticket'>here</a> to print out your ticket.
+    p.centered Thank you for purchasing a ticket for the #{Showtime}:00 pm showtime of #{Movie}. Click <a href='/ticket'>here</a> to print out your ticket.
 
     br
     hr
@@ -29,7 +29,7 @@ block content
       p Located 10 minutes from the movie theater
       p Open Tables:
 
-      form(method='POST', action='')
+      form(action='', method='POST')
         unless Showtime <= 5 || Showtime - 5 > 2
 
           input(type='radio', name='refectoryReservation', value= '5')
@@ -49,6 +49,9 @@ block content
 
           input(type='radio', name='refectoryReservation', value = '8')
           label 7:45 pm <br>
+
+        br
+        input(type='submit', name='refectory', value='Reserve Table')
 
         br.clearFloat
         hr
@@ -81,6 +84,9 @@ block content
 
           input(type='radio', name='akaiHanaReservation', value = '8')
           label 7:45 pm <br>
+
+        br
+        input(type='submit', name='akaiHana', value='Reserve Table')
 
         br.clearFloat
         hr
@@ -115,6 +121,9 @@ block content
 
           input(type='radio', name='guildHouseReservation', value = '8')
           label 7:30 pm <br>
+
+        br
+        input(type='submit', name='guildHouse', value='Reserve Table')
 
         br.clearFloat
         hr

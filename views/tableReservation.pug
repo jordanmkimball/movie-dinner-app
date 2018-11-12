@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+  .maintext
+    h2.centered Thank you!
+    br
+    br
+
+
+    if Restaurant == 'The Refectory'
+      img.tableReservedImages(src='../images/Refectory.png', alt='Picture of the Refectory')
+    else if Restaurant == 'Akai Hana'
+      img.tableReservedImages(src='../images/AkaiHana.png', alt='Picture of Akai Hana')
+    else if Restaurant == 'The Guild House'
+      img.tableReservedImages(src='../images/GuildHouse.png', alt='Picture of the Guild House')
+    
+    br.clearFloat
+    br
+    p Thank you for reserving a table at #{Restaurant} at #{table_reservation_time}. We hope to provide you with a splendid dinner before your movie. 
