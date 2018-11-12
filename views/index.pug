@@ -1,0 +1,98 @@
+extends layout
+
+block content
+  div.maintext
+    h2.centered Movies Currently Playing
+    <br>
+    <br>
+    img.movieImages(src= '../images/Halloween.png', alt= 'Halloween 2018 Image')
+
+    div.formtext
+      h3 Halloween (2018)
+
+      p R
+    
+      p Showtimes
+
+      form(method='POST', action='')
+
+        input(type='radio', name='halloweenShowtime', value='7')
+        label 7:00 pm <br>
+        
+        input(type='radio', name='halloweenShowtime', value='9')
+        label 9:00 pm <br>
+
+        br
+        input(type='submit', name='halloween', value='Purchase Ticket')
+
+    br.clearFloat
+    br
+    hr
+    br
+    
+    img.movieImages(src= '../images/Nutcracker.png', alt= 'The Nutcracker and the Four Realms Picture')
+
+    .formtext
+      h3 The Nutcracker and the Four Realms
+
+      p PG
+
+      p Showtimes
+
+      form(method='POST', action='')
+
+        input(type='radio', name='nutcrackerShowtime', value= '6')
+        label 6:00 pm <br>
+
+        input(type='radio', name='nutcrackerShowtime', value= '8')
+        label 8:00 pm <br>
+
+        input(type='radio', name='NutcrackerShowtime', value= '9')
+        label 9:00 pm <br>
+
+        br
+        input(type='submit', name='nutcracker', value='Purchase Ticket')
+
+    br.clearFloat
+    br
+    hr
+    br
+
+    img.movieImages(src= '../images/Venom.png', alt= 'Venom Movie Picture')
+
+    .formtext
+      h3 Venom
+
+      p PG-13
+
+      p Showtimes
+
+      form(method='POST', action='')
+      
+        input(type='radio', name='venomShowtime', value= '6')
+        label 6:00 pm <br>
+
+        input(type='radio', name='venomShowtime', value= '7')
+        label 7:00 pm <br>
+
+        input(type='radio', name='venomShowtime', value= '9')
+        label 9:00 pm <br>
+
+        br
+        input(type='submit', name='venom', value='Purchase Ticket')
+
+    br.clearFloat
+    br
+    br
+    hr
+    br
+
+        
+    
+
+
+
+
+
+
+  

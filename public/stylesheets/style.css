@@ -1,0 +1,89 @@
+body {
+  /* Padding started at 50px by default*/
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: silver;
+}
+
+
+/*START OF MAINTEXT: Properties affecting the main body of website text. */
+
+.maintext {
+  padding: 50px;
+  margin: auto;
+  width: 75%;
+  background-color: white;
+  font-size: 1.1em;
+}
+/*END OF MAINTEXT*/
+
+
+/*Properties affecting the text found in the movie forms. */
+.formtext {
+  padding-left: 20%;
+}
+
+
+/*Properties affecting the text found in the restaurant reservations forms.*/
+.restaurantFormtext {
+  padding-left: 30%;
+}
+
+
+/*Ensures that elements will clear the floating picture*/
+.clearFloat {
+  clear: left;
+}
+
+
+/*How the header on the index home page will be displayed*/
+.centered {
+  text-align: center;
+}
+
+
+/*How links will be displayed in the website*/
+a {
+  color: #00B7FF;
+}
+
+
+/* THIS IS THE CODE FOR THE TOPNAV BAR IN LAYOUT.PUG*/
+.topnav {
+  background-color: blueviolet;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+/*END OF CODE FOR NAVIGATION BAR IN LAYOUT.PUG*/
+
+.movieImages {
+  float: left;
+  width: 15%;
+  max-width: 200 px;
+}
+
+.restaurantImages {
+  float: left;
+  width: 20%;
+  max-width: 208 px;
+}

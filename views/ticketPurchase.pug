@@ -1,0 +1,134 @@
+extends layout
+
+block content
+  .maintext
+    h2.centered You have completed your ticket purchase. 
+    br
+    br
+
+    p.centered Thank you for purchasing a ticket for #{Movie} at #{Showtime}:00 pm. Click <a href='/ticket'>here</a> to print out your ticket.
+
+    br
+    hr
+    br
+    
+    h3.centered Want to grab dinner before the movie? We've got you covered! You can make a reservation right from this site. 
+    br
+    br
+
+    p.centered Here are some great restaurants close to the theater that have open tables right before your movie. Turn your movie night into a date night with ease.
+
+    br
+    br
+
+    
+    img.restaurantImages(src='../images/Refectory.png', alt = 'Picture of the Refectory')
+
+    .restaurantFormtext
+      h4 The Refectory $$$
+      p Located 10 minutes from the movie theater
+      p Open Tables:
+
+      form(method='POST', action='')
+        unless Showtime <= 5 || Showtime - 5 > 2
+
+          input(type='radio', name='refectoryReservation', value= '5')
+          label 4:45 pm <br>
+
+        unless Showtime <= 6 || Showtime - 6 > 2
+
+          input(type='radio', name='refectoryReservation', value= '6')
+          label 5:45 pm <br>
+        
+        unless Showtime <= 7 || Showtime - 7 > 2
+
+          input(type='radio', name='refectoryReservation', value= '7')
+          label 6:45 pm <br>
+
+        unless Showtime <= 8 || Showtime - 8 > 2
+
+          input(type='radio', name='refectoryReservation', value = '8')
+          label 7:45 pm <br>
+
+        br.clearFloat
+        hr
+
+
+    img.restaurantImages(src='../images/AkaiHana.png', alt='A picture of the Akai Hana Restaurant')
+
+    .restaurantFormtext
+      h4 Akai Hana $$
+      p Located 15 minutes from the movie theater
+      p Open Tables:
+
+      form(method='POST', action='')
+        unless Showtime <= 5 || Showtime - 5 > 2
+
+          input(type='radio', name='akaiHanaReservation', value= '5')
+          label 4:45 pm <br>
+
+        unless Showtime <= 6 || Showtime - 6 > 2
+
+          input(type='radio', name='akaiHanaReservation', value= '6')
+          label 5:45 pm <br>
+        
+        unless Showtime <= 7 || Showtime - 7 > 2
+
+          input(type='radio', name='akaiHanaReservation', value= '7')
+          label 6:45 pm <br>
+
+        unless Showtime <= 8 || Showtime - 8 > 2
+
+          input(type='radio', name='akaiHanaReservation', value = '8')
+          label 7:45 pm <br>
+
+        br.clearFloat
+        hr
+    
+
+
+    img.restaurantImages(src='../images/GuildHouse.png', alt = 'A picture of the Guild House Restaurant')
+
+    .restaurantFormtext
+      h4 Guild House $$$
+      p Located 30 minutes from the movie theater
+      p Open Tables:
+
+      form(method='POST', action='')
+
+        unless Showtime <= 5 || Showtime - 5 > 2
+
+          input(type='radio', name='guildHouseReservation', value= '5')
+          label 4:30 pm <br>
+
+        unless Showtime <= 6 || Showtime - 6 > 2
+
+          input(type='radio', name='guildHouseReservation', value= '6')
+          label 5:30 pm <br>
+        
+        unless Showtime <= 7 || Showtime - 7 > 2
+
+          input(type='radio', name='guildHouseReservation', value= '7')
+          label 6:30 pm <br>
+
+        unless Showtime <= 8 || Showtime - 8 > 2
+
+          input(type='radio', name='guildHouseReservation', value = '8')
+          label 7:30 pm <br>
+
+        br.clearFloat
+        hr
+
+    
+
+
+      
+
+
+
+
+    
+
+
+
+      
